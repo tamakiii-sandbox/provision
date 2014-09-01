@@ -89,9 +89,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.omnibus.chef_version = :latest
   config.vm.provision "chef_solo" do |chef|
     chef.cookbooks_path = ["chef/site-cookbooks"]
-    chef.add_recipe "apache"
-    chef.add_recipe "localedef"
-    chef.add_recipe "zsh"
+    ["apache", "localedef", "zsh"].each do |recipe|
+      chef.add_recipe recipe
+    end
   end
 
   # Enable provisioning with chef server, specifying the chef server URL,
