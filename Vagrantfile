@@ -91,6 +91,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     chef.cookbooks_path = ["chef/site-cookbooks"]
     chef.add_recipe "apache"
     chef.add_recipe "localedef"
+    chef.add_recipe "zsh"
   end
 
   # Enable provisioning with chef server, specifying the chef server URL,
