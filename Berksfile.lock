@@ -1,5 +1,0 @@
-DEPENDENCIES
-  zsh
-
-GRAPH
-  zsh (1.0.0)
