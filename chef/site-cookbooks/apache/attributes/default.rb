@@ -1,0 +1,5 @@
+default[:apache][:log_dir]     = '/var/log/httpd'
+default[:apache][:error_log]   = 'error.log'
+default[:apache][:access_log]  = 'access.log'
+default[:apache][:docroot_dir] = '/var/www/html'
+default[:apache][:group]       = 'vagrant'
