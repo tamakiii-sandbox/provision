@@ -3,4 +3,9 @@ source 'https://rubygems.org'
 gem 'bundler'
 gem 'chef'
 gem 'knife-solo'
-gem 'berkshelf'
+
+group :development do
+  gem 'test-kitchen'
+  gem 'kitchen-vagrant'
+  gem 'serverspec'
+end
