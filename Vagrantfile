@@ -89,7 +89,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.omnibus.chef_version = :latest
   config.vm.provision "chef_solo" do |chef|
     chef.cookbooks_path = ["chef/site-cookbooks"]
-    ["apache", "localedef", "zsh"].each do |recipe|
+    ["apache", "localedef", "zsh", "vim"].each do |recipe|
       chef.add_recipe recipe
     end
   end
