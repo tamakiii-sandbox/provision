@@ -36,6 +36,6 @@ if [[ -d $DIR_ROOT/vendor/cookbooks ]]; then
   echo
   echo "[`now`] NOTICE: Removing Berkshelf cookbooks"
   echo
-  rm -rf $DIR_ROOT/vendor/cookbooks
+  rm -rf $DIR_ROOT/chef/berks-cookbooks
 fi
-$DIR_ROOT/bin/berks vendor $DIR_ROOT/vendor/cookbooks -b $DIR_ROOT/Berksfile
+$DIR_ROOT/bin/berks vendor $DIR_ROOT/chef/berks-cookbooks -b $DIR_ROOT/chef/Berksfile
