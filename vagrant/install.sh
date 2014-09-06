@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+DIR_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 # Check if `gem` is installed
 if [[ ! -x $(which gem) ]]; then
   echo '[ERROR] gem command not found'
@@ -25,3 +27,12 @@ fi
 
 # Install packages from Gemfile
 bundle install --binstubs --path=vendor
+
+# Install recipes with Berkshelf
+if [[ -d $DIR_ROOT/vendor/cookbooks ]]; then
+  echo
+  echo "[NOTICE] Removing Berkshelf cookbooks"
+  echo
+  rm -rf $DIR_ROOT/vendor/cookbooks
+fi
+bin/berks vendor $DIR_ROOT/vendor/cookbooks
