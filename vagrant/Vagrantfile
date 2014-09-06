@@ -1,6 +1,14 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+# Plugin check
+unless Vagrant.has_plugin?('vagrant-omnibus')
+  raise 'vagrant-omnibus is not installed! Please install with `$ vagrant plugin install vagrant-omnibus`.'
+end
+unless Vagrant.has_plugin?('vagrant-share')
+  raise 'vagrant-share is not installed! Please install with `$ vagrant plugin install vagrant-share`.'
+end
+
 # Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
 VAGRANTFILE_API_VERSION = "2"
 
