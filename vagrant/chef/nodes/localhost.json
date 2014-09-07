@@ -1,6 +1,6 @@
 {
   "run_list": [
-    "recipe[php]"
+    "recipe[web-front]"
   ],
   "automatic": {
     "ipaddress": "localhost"
