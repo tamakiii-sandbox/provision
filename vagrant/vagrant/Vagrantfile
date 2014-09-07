@@ -94,13 +94,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # path, and data_bags path (all relative to this Vagrantfile), and adding
   # some recipes and/or roles.
   #
-  config.omnibus.chef_version = :latest
-  config.vm.provision "chef_solo" do |chef|
-    chef.cookbooks_path = ["chef/site-cookbooks", "chef/cookbooks", "vendor/cookbooks"]
-    # [].each do |recipe|
-    #   chef.add_recipe recipe
-    # end
-  end
+  # config.omnibus.chef_version = :latest
+  # config.vm.provision "chef_solo" do |chef|
+  #   chef.cookbooks_path = ["chef/site-cookbooks", "chef/cookbooks", "vendor/cookbooks"]
+  #   # [].each do |recipe|
+  #   #   chef.add_recipe recipe
+  #   # end
+  # end
 
   # Enable provisioning with chef server, specifying the chef server URL,
   # and the path to the validation key (relative to this Vagrantfile).
