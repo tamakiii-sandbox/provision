@@ -2,4 +2,10 @@
    ServerName vuejs.vagrant
    ServerAlias <% @params[:server_aliases].each do |a| %><%= "#{a}" %> <% end %>
    DocumentRoot <%= @params[:docroot] %>
-</VirualHost>
+</VirtualHost>
+
+<IfModule mod_userdir.c>
+  <Directory <%= @params[:docroot] %>>
+      php_admin_value engine On
+  </Directory>
+</IfModule>

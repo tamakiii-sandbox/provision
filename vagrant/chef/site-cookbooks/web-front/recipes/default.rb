@@ -13,6 +13,6 @@ include_recipe 'zsh'
 include_recipe 'chsh'
 include_recipe 'tree'
 
+include_recipe 'override-php'
 include_recipe 'override-apache'
 include_recipe 'override-mysql'
-include_recipe 'override-php'

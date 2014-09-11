@@ -28,12 +28,6 @@ web_app "vuejs" do
   server_aliases [node[:hostname], "vuejs"]
 end
 
-# create apache config
-template "#{node['apache']['dir']}/sites-available/vuejs.conf" do
-  source 'apache2.conf.erb'
-  notifies :restart, 'service[apache2]'
-end
-
 template 'apache2.conf' do
   path "#{node['apache']['conf_dir']}/httpd.conf"
   action :create
