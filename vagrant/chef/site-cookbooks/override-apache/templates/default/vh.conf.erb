@@ -1,0 +1,11 @@
+<VirtualHost *:80>
+   ServerName <%= @params[:server_name] %>
+   ServerAlias <% @params[:server_aliases].each do |a| %><%= "#{a}" %> <% end %>
+   DocumentRoot <%= @params[:docroot] %>
+</VirtualHost>
+
+<IfModule mod_userdir.c>
+  <Directory <%= @params[:docroot] %>>
+      php_admin_value engine On
+  </Directory>
+</IfModule>
