@@ -20,12 +20,20 @@ directory '/web/httpd' do
   recursive true
 end
 
-# Set up config
+# vuejs
 web_app "vuejs" do
   docroot "/web/httpd/vuejs/public"
   template "vuejs.conf.erb"
   server_name node[:fqdn]
   server_aliases [node[:hostname], "vuejs"]
+end
+
+# hq_app
+web_app "hq_app" do
+  template "vh.conf.erb"
+  docroot "/web/httpd/hq_app/public/web"
+  server_name "hq_app.vagrant"
+  server_aliases [node[:hostname], "hq_app"]
 end
 
 template 'apache2.conf' do
@@ -38,8 +46,18 @@ template 'apache2.conf' do
   notifies :reload, 'service[apache2]', :delayed
 end
 
+directory "/var/log/app_preserve/zucks" do
+  action :create
+  owner 'root'
+  group node['apache']['root_group']
+  mode '0775'
+  recursive true
+end
+
 # enable
 apache_site 'vuejs.conf' do
   enable true
 end
-
+apache_site 'hq_app.conf' do
+  enable true
+end
