@@ -19,7 +19,7 @@
 
 default['apache']['version'] = '2.2'
 
-default['apache']['root_group'] = 'root'
+default['apache']['root_group'] = 'vagrant'
 
 default['apache']['default_site_name'] = 'default'
 
