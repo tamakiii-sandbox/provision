@@ -65,7 +65,7 @@ Group <%= node['apache']['group'] %>
 
 <Directory <%= node['apache']['docroot_dir'] %>>
         Options Indexes FollowSymLinks
-        AllowOverride None
+        AllowOverride All
         Require all granted
 </Directory>
 
@@ -172,7 +172,7 @@ Include <%= node['apache']['dir'] %>/ports.conf
 
 <Directory <%= node['apache']['docroot_dir'] %>>
         Options Indexes FollowSymLinks
-        AllowOverride None
+        AllowOverride All
         Require all granted
 </Directory>
 
