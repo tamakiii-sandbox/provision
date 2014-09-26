@@ -1,15 +1,22 @@
 DEPENDENCIES
   apache
   mysql
+  nodejs (~> 2.1.0)
   php
 
 GRAPH
+  7-zip (1.0.2)
+    windows (>= 1.2.2)
   apache (0.0.5)
     apache2 (>= 0.0.0)
   apache2 (2.0.0)
     iptables (>= 0.0.0)
     logrotate (>= 0.0.0)
     pacman (>= 0.0.0)
+  apt (2.6.0)
+  ark (0.9.0)
+    7-zip (>= 0.0.0)
+    windows (>= 0.0.0)
   build-essential (2.0.6)
   chef-sugar (2.2.0)
   chef_handler (1.1.6)
@@ -19,6 +26,11 @@ GRAPH
   logrotate (1.6.0)
   mysql (5.5.1)
     yum-mysql-community (>= 0.0.0)
+  nodejs (2.1.0)
+    apt (>= 0.0.0)
+    ark (>= 0.0.0)
+    build-essential (>= 0.0.0)
+    yum-epel (>= 0.0.0)
   pacman (1.1.1)
   php (1.4.6)
     build-essential (>= 0.0.0)

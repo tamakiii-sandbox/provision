@@ -12,6 +12,7 @@ include_recipe 'vim'
 include_recipe 'zsh'
 include_recipe 'chsh'
 include_recipe 'tree'
+include_recipe 'bower'
 
 include_recipe 'override-php'
 include_recipe 'override-apache'

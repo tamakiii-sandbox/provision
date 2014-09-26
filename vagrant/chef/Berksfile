@@ -3,3 +3,5 @@ source "https://supermarket.getchef.com"
 cookbook "apache"
 cookbook "mysql"
 cookbook "php"
+cookbook 'nodejs', '~> 2.1.0'
+
