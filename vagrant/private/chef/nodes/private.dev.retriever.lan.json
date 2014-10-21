@@ -1,7 +1,8 @@
 {
   "run_list": [
     "recipe[vim]",
-    "recipe[zsh]"
+    "recipe[zsh]",
+    "recipe[chsh]"
   ],
   "automatic": {
     "ipaddress": "private.dev.retriever.lan"
