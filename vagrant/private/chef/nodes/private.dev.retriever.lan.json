@@ -1,8 +1,11 @@
 {
   "run_list": [
+    "yum",
     "recipe[vim]",
     "recipe[zsh]",
-    "recipe[chsh]"
+    "recipe[chsh]",
+    "recipe[yum]",
+    "recipe[php]"
   ],
   "automatic": {
     "ipaddress": "private.dev.retriever.lan"
