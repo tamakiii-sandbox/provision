@@ -1,5 +1,0 @@
-source "https://supermarket.getchef.com"
-
-cookbook "apache"
-cookbook "mysql"
-cookbook "php"
